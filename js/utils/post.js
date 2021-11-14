@@ -27,6 +27,12 @@ export function createPostElement(post) {
     });
   }
 
+  // go to detai page
+  const divElement = liElement.firstElementChild;
+  divElement.addEventListener('click', () => {
+    window.location.assign(`/post-detail.html?id=${post.id}`);
+  });
+
   return liElement;
 }
 
